@@ -1,0 +1,48 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-primary: #a2aa7b;
+	--color-secondary: #50e3c2;
+	--radius-5px: 5px;
+}
+
+/* Custom utilities */
+.rounded-5px {
+	border-radius: 5px;
+}
+
+.bg-primary {
+	background-color: var(--color-primary);
+}
+
+.bg-primary-gradient {
+	background: linear-gradient(135deg, var(--color-primary), #8a9165);
+}
+
+.text-primary {
+	color: var(--color-primary);
+}
+
+.border-primary {
+	border-color: var(--color-primary);
+}
+
+/* Smooth scrolling for navigation */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Custom gradient animations */
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+.float-animation {
+	animation: float 3s ease-in-out infinite;
+}
