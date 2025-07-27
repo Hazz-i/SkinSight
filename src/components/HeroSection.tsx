@@ -2,7 +2,7 @@ import { Button, Container } from './ui';
 
 const HeroSection = () => {
 	return (
-		<section className='pt-20 pb-16'>
+		<section className='pt-14'>
 			<Container>
 				<div className='text-center mb-16'>
 					<h1 className='text-4xl md:text-6xl font-bold text-gray-900 mb-6'>
@@ -35,10 +35,10 @@ const HeroSection = () => {
 
 				{/* Hero Image/Mockup */}
 				<div className='relative max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-4'>
-					<div className='h-[55vh] w-60 md:h-[70vh] md:w-80 md:-rotate-10 rounded-xl overflow-hidden shadow-2xl z-10 flex-shrink-0'>
+					<div className='min-h-[55vh] w-60 md:h-[70vh] md:w-80 md:-rotate-10 rounded-xl overflow-hidden shadow-2xl z-10 flex-shrink-0'>
 						<img src='./home.jpg' className='w-full h-full object-cover' alt='Home preview' />
 					</div>
-					<div className='h-[55vh] w-60 md:h-[70vh] md:w-80 md:rotate-5 rounded-xl overflow-hidden shadow-2xl z-10 flex-shrink-0'>
+					<div className='min-h-[55vh] w-60 md:h-[70vh] md:w-80 md:rotate-5 rounded-xl overflow-hidden shadow-2xl z-10 flex-shrink-0'>
 						<img src='./scan.jpg' className='w-full h-full object-cover' alt='Scan preview' />
 					</div>
 				</div>

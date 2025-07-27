@@ -1,6 +1,8 @@
-import { Logo, Container } from './ui';
-
 import React, { useState, useEffect } from 'react';
+import { FaBars } from 'react-icons/fa';
+
+import Container from './ui/Container';
+import Logo from './ui/Logo';
 
 const navLinks = [
 	{ label: 'Home', href: '#home' },
@@ -10,6 +12,7 @@ const navLinks = [
 
 const Navbar = () => {
 	const [active, setActive] = useState('Home');
+	const [menuOpen, setMenuOpen] = useState(false);
 
 	// Scroll spy effect
 	useEffect(() => {
@@ -41,16 +44,17 @@ const Navbar = () => {
 	};
 
 	return (
-		<nav className='backdrop-blur-md rounded-full w-7xl mx-auto'>
+		<nav className='backdrop-blur-md rounded-full max-w-7xl mx-auto px-2 sm:px-4'>
 			<Container>
-				<div className='flex justify-between items-center h-16'>
+				<div className='flex justify-between items-center h-16 relative'>
 					<Logo />
-					<div className='hidden md:flex items-center space-x-8'>
+					{/* Desktop nav */}
+					<div className='hidden md:flex items-center space-x-4 lg:space-x-8'>
 						{navLinks.map((link) =>
 							link.label === 'Download' ? (
 								<button
 									key={link.label}
-									className={`px-6 py-2 rounded-full text-base bg-primary text-white hover:bg-primary/90 transition-colors cursor-pointer font-semibold hover:scale-105 duration-300 ease-in `}
+									className={`px-4 lg:px-6 py-2 rounded-full text-base bg-primary text-white hover:bg-primary/90 transition-colors cursor-pointer font-semibold hover:scale-105 duration-300 ease-in`}
 									onClick={() => {
 										setActive(link.label);
 										const target = document.querySelector(link.href);
