@@ -11,24 +11,34 @@ const HeroSection = () => {
 							BUILD CONFIDENCE
 						</span>
 					</h1>
-					<p className='text-gray-600 mb-8 max-w-3xl mx-auto'>
+					<p className='text-gray-600 mb-8 md:max-w-3xl mx-auto'>
 						Stop guessing. Start DOMINATING. Brutal AI obliterates your skin problems with PRECISION
 						ATTACKS. No mercy. No excuses. Just results.
 					</p>
 					<div className='flex flex-col sm:flex-row gap-2 justify-center'>
-						<Button size='sm'> SCAN NOW - IT'S FREE</Button>
+						<Button
+							size='sm'
+							onClick={() => {
+								const target = document.querySelector('#download');
+								if (target) {
+									target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+								}
+							}}
+						>
+							Scan Now - It's Free
+						</Button>
 						<Button variant='outline' size='sm'>
-							WATCH DESTRUCTION
+							Watch Demo
 						</Button>
 					</div>
 				</div>
 
 				{/* Hero Image/Mockup */}
-				<div className='relative max-w-4xl mx-auto flex items-center justify-center'>
-					<div className='h-[70vh] w-80 -rotate-10 rounded-xl overflow-hidden shadow-2xl z-10'>
+				<div className='relative max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-4'>
+					<div className='h-[55vh] w-60 md:h-[70vh] md:w-80 md:-rotate-10 rounded-xl overflow-hidden shadow-2xl z-10 flex-shrink-0'>
 						<img src='./home.jpg' className='w-full h-full object-cover' alt='Home preview' />
 					</div>
-					<div className='h-[70vh] w-80 rotate-5 rounded-xl overflow-hidden shadow-2xl z-10'>
+					<div className='h-[55vh] w-60 md:h-[70vh] md:w-80 md:rotate-5 rounded-xl overflow-hidden shadow-2xl z-10 flex-shrink-0'>
 						<img src='./scan.jpg' className='w-full h-full object-cover' alt='Scan preview' />
 					</div>
 				</div>

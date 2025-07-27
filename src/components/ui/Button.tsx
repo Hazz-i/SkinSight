@@ -16,12 +16,12 @@ const Button = ({
 	href,
 }: ButtonProps) => {
 	const baseClasses =
-		'font-semibold rounded-full transition-all duration-300 inline-flex items-center justify-center cursor-pointer';
+		'font-semibold rounded-full transition-all duration-300 inline-flex items-center justify-center cursor-pointer hover:scale-105 transition-transform duration-200 ease-out';
 
 	const variantClasses = {
 		primary: 'bg-primary-gradient text-white',
 		secondary: 'bg-gray-200 text-gray-800 hover:bg-gray-300',
-		outline: 'border-2 border-primary text-primary hover:bg-primary hover:text-white',
+		outline: 'border-1 border-primary text-[#A2AA7B] hover:bg-primary hover:text-white',
 	};
 
 	const sizeClasses = {

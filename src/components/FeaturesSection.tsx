@@ -1,29 +1,18 @@
-import { Container } from './ui';
+import { FaPumpSoap, FaSun, FaFlask, FaNewspaper, FaGraduationCap, FaRobot } from 'react-icons/fa';
+import React from 'react';
 
 interface FeatureCardProps {
-	icon: string;
+	icon: React.ReactNode;
 	title: string;
 	description: string;
-	bgColor: string;
-	borderColor: string;
-	iconBg: string;
 }
 
-const FeatureCard = ({
-	icon,
-	title,
-	description,
-	bgColor,
-	borderColor,
-	iconBg,
-}: FeatureCardProps) => {
+const FeatureCard = ({ icon, title, description }: FeatureCardProps) => {
 	return (
 		<div
-			className={`bg-${bgColor} p-8 rounded-5px border ${borderColor} hover:shadow-lg transition-all duration-300`}
+			className={`p-8 rounded-5px bg-white/80 hover:shadow-lg transition-all duration-300 cursor-pointer`}
 		>
-			<div className={`w-12 h-12 ${iconBg} rounded-5px flex items-center justify-center mb-6`}>
-				<span className='text-white text-xl'>{icon}</span>
-			</div>
+			<div className='text-primary text-3xl mb-2'>{icon}</div>
 			<h3 className='text-xl font-bold text-gray-900 mb-4'>{title}</h3>
 			<p className='text-gray-600'>{description}</p>
 		</div>
@@ -33,88 +22,66 @@ const FeatureCard = ({
 const FeaturesSection = () => {
 	const features = [
 		{
-			icon: '🔍',
-			title: 'AI SKIN SCANNER',
+			icon: <FaPumpSoap />,
+			title: 'Personalized Skincare Recommendations',
 			description:
-				'BRUTAL PRECISION. ZERO BULLSH*T. Computer vision yang menghancurkan semua asumsi tentang kulit Anda dengan analisis super detail.',
-			bgColor: 'bg-white',
-			borderColor: 'border-primary/30',
-			iconBg: 'bg-primary-gradient',
+				'Get the best skincare products and routines tailored to your unique skin type. No more guessing—just results.',
 		},
 		{
-			icon: '💡',
-			title: 'PERSONAL SKIN HACKER',
+			icon: <FaSun />,
+			title: 'Sunscreen Advice by UV Index',
 			description:
-				'CUSTOM-BUILT FOR YOU. Algoritma brutal yang meretas pola kulit Anda dan meracik formula perawatan eksklusif yang PASTI bekerja.',
-			bgColor: 'bg-white',
-			borderColor: 'border-secondary/30',
-			iconBg: 'bg-gradient-to-r from-secondary to-primary',
+				'Get daily sunscreen recommendations based on today’s UV index in your area. Stay protected, always.',
 		},
 		{
-			icon: '📊',
-			title: 'PROGRESS DESTROYER',
+			icon: <FaFlask />,
+			title: 'Ingredient Safety Scanner',
 			description:
-				'TRACK EVERYTHING. MISS NOTHING. Dashboard brutal yang menampilkan transformasi kulit Anda dengan data real-time yang membuat Anda ketagihan.',
-			bgColor: 'bg-white',
-			borderColor: 'border-green-100',
-			iconBg: 'bg-gradient-to-r from-green-500 to-emerald-600',
+				'Scan product ingredients to detect harmful substances for your skin type. Instantly get safer alternatives.',
 		},
 		{
-			icon: '👥',
-			title: 'EXPERT DEMOLITION',
+			icon: <FaNewspaper />,
+			title: 'Skincare News',
 			description:
-				'DERMATOLOG REAL. ADVICE BRUTAL. Konsultasi langsung dengan skin experts yang tidak takut memberikan truth bomb tentang kulit Anda.',
-			bgColor: 'bg-white',
-			borderColor: 'border-orange-100',
-			iconBg: 'bg-gradient-to-r from-orange-500 to-red-600',
+				'Stay updated with the newest trends, research, and news in the skincare world—right in the app.',
 		},
 		{
-			icon: '🛡️',
-			title: 'PRIVACY FORTRESS',
+			icon: <FaGraduationCap />,
+			title: 'Skincare Education',
 			description:
-				'LOCK & LOADED. Data Anda dilindungi dengan enkripsi brutal level militer. Privasi bukan pilihan, tapi HAK MUTLAK.',
-			bgColor: 'bg-white',
-			borderColor: 'border-teal-100',
-			iconBg: 'bg-gradient-to-r from-teal-500 to-cyan-600',
+				'Access up-to-date skincare education and tips to empower your daily routine and decisions.',
 		},
 		{
-			icon: '📱',
-			title: 'MOBILE DOMINATION',
+			icon: <FaRobot />,
+			title: 'AI Skin Type Prediction',
 			description:
-				'ANYWHERE. ANYTIME. UNSTOPPABLE. Interface yang dirancang untuk menghancurkan batasan - analisis kulit powerful di genggaman Anda.',
-			bgColor: 'bg-white',
-			borderColor: 'border-primary/20',
-			iconBg: 'bg-gradient-to-r from-primary to-secondary',
+				'Simply scan your skin and let our AI predict your skin type for truly personalized care.',
 		},
 	];
 
 	return (
-		<section id='features' className='py-20 '>
-			<Container>
+		<section id='features' className='py-20 md:py-40'>
+			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='text-center mb-16'>
 					<h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
-						UNLEASH YOUR <span className='text-primary'>SKIN'S</span> POTENTIAL
+						Powerful Features for Better <span className='text-primary'>Skin Health</span>
 					</h2>
 					<p className='text-gray-600 max-w-2xl mx-auto'>
-						Stop settling for average skin. Our BRUTAL technology stack demolishes skincare myths
-						and builds you a BULLETPROOF routine.
+						Discover how our advanced technology can help you achieve healthier, more radiant skin.
 					</p>
 				</div>
 
-				<div className='flex items-center justify-center gap-5 flex-wrap'>
+				<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8'>
 					{features.map((feature, index) => (
 						<FeatureCard
 							key={index}
 							icon={feature.icon}
 							title={feature.title}
 							description={feature.description}
-							bgColor={feature.bgColor}
-							borderColor={feature.borderColor}
-							iconBg={feature.iconBg}
 						/>
 					))}
 				</div>
-			</Container>
+			</div>
 		</section>
 	);
 };
