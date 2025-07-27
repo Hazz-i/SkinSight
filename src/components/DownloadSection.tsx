@@ -17,10 +17,6 @@ const QRCodeDisplay = () => {
 				<p className='mb-2'>Compatible with:</p>
 				<div className='flex justify-center space-x-4'>
 					<span className='flex items-center space-x-1'>
-						<span>📱</span>
-						<span>iOS 12+</span>
-					</span>
-					<span className='flex items-center space-x-1'>
 						<span>🤖</span>
 						<span>Android 8+</span>
 					</span>
