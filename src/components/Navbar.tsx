@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { FaBars } from 'react-icons/fa';
 
 import Container from './ui/Container';
 import Logo from './ui/Logo';
@@ -12,7 +11,6 @@ const navLinks = [
 
 const Navbar = () => {
 	const [active, setActive] = useState('Home');
-	const [menuOpen, setMenuOpen] = useState(false);
 
 	// Scroll spy effect
 	useEffect(() => {
