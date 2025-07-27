@@ -35,10 +35,10 @@ const HeroSection = () => {
 
 				{/* Hero Image/Mockup */}
 				<div className='relative max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-4'>
-					<div className='min-h-[55vh] w-60 md:min-h-[70vh] md:min-w-[20rem] md:-rotate-10 rounded-xl overflow-hidden shadow-2xl z-10 flex-shrink-0'>
+					<div className='min-h-[55vh] w-60 md:h-[70vh] md:min-w-[20rem] md:-rotate-10 rounded-xl overflow-hidden shadow-2xl z-10 flex-shrink-0'>
 						<img src='./home.jpg' className='w-full h-full object-cover' alt='Home preview' />
 					</div>
-					<div className='min-h-[55vh] w-60 md:min-h-[70vh] md:min-w-[20rem] md:rotate-5 rounded-xl overflow-hidden shadow-2xl z-10 flex-shrink-0'>
+					<div className='min-h-[55vh] w-60 md:h-[70vh] md:min-w-[20rem] md:rotate-5 rounded-xl overflow-hidden shadow-2xl z-10 flex-shrink-0'>
 						<img src='./scan.jpg' className='w-full h-full object-cover' alt='Scan preview' />
 					</div>
 				</div>
