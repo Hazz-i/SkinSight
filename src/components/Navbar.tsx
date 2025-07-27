@@ -1,4 +1,4 @@
-import { Button, Logo, Container } from './ui';
+import { Logo, Container } from './ui';
 
 import React, { useState, useEffect } from 'react';
 
