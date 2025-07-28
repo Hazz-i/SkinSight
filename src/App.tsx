@@ -1,4 +1,11 @@
-import { Navbar, HeroSection, FeaturesSection, DownloadSection, Footer } from './components';
+import {
+	Navbar,
+	HeroSection,
+	FeaturesSection,
+	DownloadSection,
+	TeamSection,
+	Footer,
+} from './components';
 
 const App = () => {
 	return (
@@ -6,6 +13,7 @@ const App = () => {
 			<Navbar />
 			<HeroSection />
 			<FeaturesSection />
+			<TeamSection />
 			<DownloadSection />
 			<Footer />
 		</div>
