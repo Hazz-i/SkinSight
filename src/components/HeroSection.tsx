@@ -27,7 +27,16 @@ const HeroSection = () => {
 						>
 							Scan Now - It's Free
 						</Button>
-						<Button variant='outline' size='sm'>
+						<Button
+							variant='outline'
+							size='sm'
+							onClick={() =>
+								window.open(
+									'https://drive.google.com/file/d/1NzMVtJM9-o0GTqyrKrNh8yeJskRx3Ysh/view?usp=sharing',
+									'_blank'
+								)
+							}
+						>
 							Watch Demo
 						</Button>
 					</div>
