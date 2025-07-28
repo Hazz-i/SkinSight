@@ -10,7 +10,7 @@ const navLinks = [
 	{ label: 'Download', href: '#download' },
 ];
 
-const download = 'https://github.com/nikenlis/SkinSight-App/releases/download/1.0/app-release.apk';
+const download = 'https://github.com/nikenlis/SkinSight-App/releases/download/1.1/app-release.apk';
 
 const Navbar = () => {
 	const [active, setActive] = useState('Home');
