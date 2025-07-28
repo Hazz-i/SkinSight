@@ -9,6 +9,8 @@ const navLinks = [
 	{ label: 'Download', href: '#download' },
 ];
 
+const download = 'https://github.com/nikenlis/SkinSight-App/releases/download/1.0/app-release.apk';
+
 const Navbar = () => {
 	const [active, setActive] = useState('Home');
 
@@ -54,11 +56,7 @@ const Navbar = () => {
 									key={link.label}
 									className={`px-4 lg:px-6 py-2 rounded-full text-base bg-primary text-white hover:bg-primary/90 transition-colors cursor-pointer font-semibold hover:scale-105 duration-300 ease-in`}
 									onClick={() => {
-										setActive(link.label);
-										const target = document.querySelector(link.href);
-										if (target) {
-											target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-										}
+										window.open(download, '_blank');
 									}}
 								>
 									{link.label}

@@ -10,7 +10,7 @@ const QRCodeDisplay = () => {
 
 			{/* QR Code Placeholder */}
 			<div className='w-40 h-40 md:w-48 md:h-48 mx-auto bg-gray-100 rounded-5px flex items-center justify-center mb-6 border-2 border-dashed border-gray-300'>
-				<img src='./qr.png' alt='' className='w-3/4 h-3/4 object-contain' />
+				<img src='./qr.jpg' alt='' className='w-3/4 h-3/4 object-contain' />
 			</div>
 
 			<div className='text-center text-sm text-gray-600'>
