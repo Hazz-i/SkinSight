@@ -1,5 +1,6 @@
 import myImage from '../assets/guwe.jpg';
 import niken from '../assets/niken.jpg';
+import zuma from '../assets/zum.jpg';
 
 const team = [
 	{
@@ -10,7 +11,7 @@ const team = [
 	{
 		name: 'Rahmat Wahyuma Akbar',
 		role: 'Backend Developer',
-		img: 'https://randomuser.me/api/portraits/men/32.jpg',
+		img: zuma,
 	},
 	{
 		name: 'Wahid Hasim Santoso',
