@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FaBars } from 'react-icons/fa';
 
 import Container from './ui/Container';
 import Logo from './ui/Logo';
@@ -13,6 +14,7 @@ const download = 'https://github.com/nikenlis/SkinSight-App/releases/download/1.
 
 const Navbar = () => {
 	const [active, setActive] = useState('Home');
+	const [menuOpen, setMenuOpen] = useState(false);
 
 	// Scroll spy effect
 	useEffect(() => {
@@ -75,6 +77,48 @@ const Navbar = () => {
 							)
 						)}
 					</div>
+					{/* Mobile hamburger */}
+					<div className='md:hidden flex items-center'>
+						<button
+							className='text-primary text-2xl p-2 focus:outline-none'
+							onClick={() => setMenuOpen((prev) => !prev)}
+						>
+							<FaBars />
+						</button>
+					</div>
+					{/* Mobile menu */}
+					{menuOpen && (
+						<div className='absolute top-16 right-0 w-48 bg-white rounded-xl shadow-lg flex flex-col items-start p-4 z-50 border border-gray-100'>
+							{navLinks.map((link) =>
+								link.label === 'Download' ? (
+									<button
+										key={link.label}
+										className={`w-full text-left px-4 py-2 rounded-full bg-primary text-white hover:bg-primary/90 transition-colors font-semibold mb-2`}
+										onClick={() => {
+											setMenuOpen(false);
+											window.open(download, '_blank');
+										}}
+									>
+										{link.label}
+									</button>
+								) : (
+									<a
+										key={link.label}
+										href={link.href}
+										className={`w-full block px-4 py-2 text-gray-600 hover:text-primary transition-colors ${
+											active === link.label ? 'font-bold text-primary' : ''
+										} mb-2`}
+										onClick={(e) => {
+											handleClick(e, link.label, link.href);
+											setMenuOpen(false);
+										}}
+									>
+										{link.label}
+									</a>
+								)
+							)}
+						</div>
+					)}
 				</div>
 			</Container>
 		</nav>
